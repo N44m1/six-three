@@ -1,0 +1,262 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 0.2fr 0.3fr 0.6fr 0.5fr 0.6fr 0.5fr 0.2fr 0.3fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "picture picture picture picture picture"
+        ". who-we-are who-we-are who-we-are ."
+        "second-picture second-picture second-picture second-picture second-picture"
+        ". fashion-demo fashion-demo fashion-demo ."
+        "third-picture third-picture third-picture third-picture third-picture"
+        ". blog blog blog ."
+        "fourth-picture fourth-picture fourth-picture fourth-picture fourth-picture"
+        ". logos logos logos ."
+        "footer footer footer footer footer"
+        "info info info info info";
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        ". . ."
+        ". . .";
+    grid-area: picture;
+    background-image: url(picture-one.webp);
+    height: 1000px;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: #FFFFFF;
+}
+
+
+.who-we-are {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 0.2fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". title ."
+        "who-we-info first-pic third-pic"
+        "who-we-info second-pic fourth-pic"
+        ". . .";
+    grid-area: who-we-are;
+}
+
+.title {
+    grid-area: title;
+    width: 390px;
+}
+
+.who-we-info {
+    grid-area: who-we-info;
+    place-self: center;
+}
+
+.first-pic {
+    grid-area: first-pic;
+    place-self: center;
+}
+
+.second-pic {
+    grid-area: second-pic;
+    place-self: center;
+}
+
+.third-pic {
+    grid-area: third-pic;
+    place-self: center;
+}
+
+.fourth-pic {
+    grid-area: fourth-pic;
+    place-self: center;
+}
+
+.second-picture {
+    display: grid;
+    grid-template-columns: 1.1fr 1.8fr 0.4fr 0.4fr 0.8fr 1.1fr;
+    grid-template-rows: 1.1fr 0.9fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        ". . second-pic-1 second-pic-2 . ."
+        ". . second-pic-3 second-pic-4 . ."
+        ". . second-pic-5 second-pic-6 . .";
+    grid-area: second-picture;
+    background-image: url(picture-two.webp);
+    height: 750px;
+}
+
+.second-pic-1 {
+    grid-area: second-pic-1;
+    place-self: center;
+}
+
+.second-pic-2 {
+    grid-area: second-pic-2;
+    place-self: center;
+}
+
+.second-pic-3 {
+    grid-area: second-pic-3;
+    place-self: center;
+}
+
+.second-pic-4 {
+    grid-area: second-pic-4;
+    place-self: center;
+}
+
+.second-pic-5 {
+    grid-area: second-pic-5;
+    place-self: center;
+}
+
+.second-pic-6 {
+    grid-area: second-pic-6;
+    place-self: center;
+}
+
+.fashion-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". demo-main-picture ."
+        "demo-title demo-main-picture ."
+        "demo-pictures demo-main-picture .";
+    grid-area: fashion-demo;
+    place-self: center;
+}
+
+.demo-title {
+    grid-area: demo-title;
+}
+
+.demo-pictures {
+    grid-area: demo-pictures;
+    display: flex;
+}
+
+.demo-pictures>img {
+    margin-right: 20px;
+}
+
+.demo-main-picture {
+    grid-area: demo-main-picture;
+}
+
+
+.third-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . . ."
+        ". . . third-text ."
+        ". . . . .";
+    grid-area: third-picture;
+    background-image: url(picture-three.webp);
+    height: 570px;
+}
+
+.third-text {
+    grid-area: third-text;
+}
+
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". blog-header ."
+        "blog-1 blog-2 blog-3"
+        "blog-1 blog-2 blog-3";
+    grid-area: blog;
+}
+
+.blog-header {
+    grid-area: blog-header;
+}
+
+.blog-1 {
+    grid-area: blog-1;
+}
+
+.blog-2 {
+    grid-area: blog-2;
+}
+
+.blog-3 {
+    grid-area: blog-3;
+}
+
+.fourth-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". fourth-picture-text ."
+        ". . .";
+    grid-area: fourth-picture;
+    background-image: url(picture-four.webp);
+    height: 590px;
+}
+
+.fourth-picture-text {
+    grid-area: fourth-picture-text;
+
+}
+
+.logos {
+    grid-area: logos;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    grid-area: footer;
+    background: #222222;
+    display: flex;
+    place-content: space-around;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 261px;
+
+}
+
+.footer-section>h1 {
+    color: #FFFFFF
+}
+
+.footer-section>span {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.info {
+    grid-area: info;
+    background: #333333;
+}
